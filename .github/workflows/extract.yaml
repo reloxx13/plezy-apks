@@ -1,9 +1,6 @@
 name: Extract Plezy APKs
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # Run hourly at 17 minutes past the hour
     - cron: "17 * * * *"
