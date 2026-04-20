@@ -2,8 +2,8 @@ name: Extract Plezy APKs
 
 on:
   schedule:
-    # Run daily at 06:00 UTC
-    - cron: "0 6 * * *"
+    # Run hourly at 17 minutes past the hour
+    - cron: "17 * * * *"
   workflow_dispatch: # Allow manual trigger
 
 permissions:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get latest Plezy release
         id: plezy
